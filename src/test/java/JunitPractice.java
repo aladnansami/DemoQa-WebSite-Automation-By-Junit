@@ -9,13 +9,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
-
 public class JunitPractice {
 
         WebDriver driver;
@@ -23,13 +21,13 @@ public class JunitPractice {
         public  void setup(){
             System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver.exe");
           ChromeOptions options= new ChromeOptions();
-          options.addArguments("--headed");
+          options.addArguments("--headedless");
           driver =new ChromeDriver(options);
           driver.manage().window().maximize();
           driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         }
-        @Test
+        @Test()
         public void getTitle(){
             driver.get("https://demoqa.com/");
             String title= driver.getTitle();
@@ -125,7 +123,7 @@ public class JunitPractice {
     @Test
     public void uploadFile(){
         driver.get("https://demoqa.com/upload-download");
-        driver.findElement(By.id("uploadFile")).sendKeys("D:\\a.jpg");
+        driver.findElement(By.id("uploadFile")).sendKeys("\"D:\\PPT\\Chairman-Cho-Chung-il.jpg\"");
     }
     @Test
     public void downloadFile(){
@@ -139,12 +137,13 @@ public class JunitPractice {
           Thread.sleep(3000);
         ArrayList<String> w= new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(w.get(1));
-        String text = driver.findElement(By.id("sampleHandling")).getText();
+        String text = driver.findElement(By.cssSelector("sampleHandling")).getText();
         Assert.assertEquals(text,"This is a simple page");
         driver.close();
         driver.switchTo().window(w.get(0));
     }
-@Test
+
+    @Test
     public void handleWindow(){
         driver.get("https://demoqa.com/browser-windows");
         WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(50));
@@ -157,7 +156,7 @@ public class JunitPractice {
         String childwindw=iterator.next();
         if(!mainWindowHandle.equalsIgnoreCase(childwindw));
         driver.switchTo().window(childwindw);
-        String text = driver.findElement(By.id("sampleHandling")).getText();
+        String text = driver.findElement(By.cssSelector("sampleHandling")).getText();
         Assert.assertEquals(text,"This is a simple page");
     }
     driver.close();
