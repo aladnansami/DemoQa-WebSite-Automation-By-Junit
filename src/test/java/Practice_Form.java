@@ -27,8 +27,9 @@ public class Practice_Form extends BasePage
     @Test
     public void loginform()
     {
+
+        BasePage basePage=new BasePage();
         driver.get("https://demoqa.com/automation-practice-form");
-        driver.t
     }
 
     @After
