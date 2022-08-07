@@ -2,14 +2,18 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.FindBy;
 
+import java.sql.Driver;
 import java.time.Duration;
 
-public class Practice_Form extends BasePage{
+public class Practice_Form extends BasePage
+{
     WebDriver driver;
-    BasePage login =new BasePage(driver);
+
     @Before
     public  void setup(){
         System.setProperty("webdriver.chrome.driver","./src/test/resources/chromedriver.exe");
@@ -24,12 +28,12 @@ public class Practice_Form extends BasePage{
     public void loginform()
     {
         driver.get("https://demoqa.com/automation-practice-form");
-
-        login.txtfirstName.sendKeys("Adnan");
+        driver.t
     }
 
     @After
     public void closeDriver(){
+
         driver.close();
     }
 }
