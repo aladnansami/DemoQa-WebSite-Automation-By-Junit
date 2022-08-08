@@ -3,7 +3,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class BasePage {
-    WebDriver driver;
+    protected WebDriver driver;
     @FindBy(id = "firstName")
     WebElement txtfirstName;
 
@@ -46,4 +46,7 @@ public class BasePage {
     @FindBy(id = "submit")
     WebElement btnsubmit;
 
+    public BasePage(WebDriver driver) {
+        this.driver=driver;
+    }
 }
