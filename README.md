@@ -29,3 +29,5 @@ Junit Form - https://github.com/aladnansami/DemoQa-WebSite-Automation-By-Junit/b
 
 ## Form value stores in json formet
 https://github.com/aladnansami/DemoQa-WebSite-Automation-By-Junit/blob/main/src/test/resources/students.json
+
+<img src="https://github.com/aladnansami/DemoQa-WebSite-Automation-By-Junit/blob/main/report.png">
