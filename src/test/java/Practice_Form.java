@@ -59,7 +59,7 @@ public class Practice_Form
         radiohobbiessports.click();
 
         WebElement uploadpicture =driver.findElement(By.id("uploadPicture"));
-        txtsubject.sendKeys("\"C:\\Users\\adnan\\Pictures\\onemin1000.png\"");
+        txtsubject.sendKeys("\"D:\\Testing SEDT\\CV\\279959202_3271339786432422_1618629510372504782_n-removebg-preview.png\"");
 
 
     }
