@@ -24,4 +24,6 @@ public void takeScreenShot () throws IOException {<br>
 12. https://demoqa.com/webtables (Scrap data) <br>
 
 ## # Automated Modules in Practice_Form Class 
-1. https://demoqa.com/automation-practice-form (Automated Form)
+1. https://demoqa.com/automation-practice-form (Automated Form) <br>
+Junit Form - https://github.com/aladnansami/DemoQa-WebSite-Automation-By-Junit/blob/main/src/test/java/Practice_Form.java
+
